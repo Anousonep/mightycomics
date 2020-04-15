@@ -1,0 +1,78 @@
+{% extends 'admin/base.html.twig' %}
+
+{% block title %}Administration des comics{% endblock %}
+
+{% block body %}
+    <div class="container-fluid">
+        <div class="alert alert-success deleteMessage d-none">
+            <h4 class="">Le comic a bien été supprimé!</h4>
+        </div>
+        <h1 class="my-5">Gestion des comics</h1>
+
+        <a href="{{ path('comics_create') }}" class="btn btn-primary mb-5"><i class="fas fa-plus">&nbsp;</i>Ajouter un nouveau comic</a>
+
+        <table class="table table-hover">
+            <thead>
+                <tr>
+                    <th>Id</th>
+                    <th>Titre</th>
+                    <th class="text-center">Quantité</th>
+                    <th class="text-center">Prix</th>
+                    <th class="text-center">Actions</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                {% for comic in comics %}
+                <tr id="{{ comic.id }}">
+                    <td class="">
+                        {{ comic.id }}
+                    </td>
+                    <td>
+                        <span class="">
+                            {{ comic.title }}
+                        </span>
+                    </td>
+                    <td class="text-center">
+                        <span class="">
+                            {{ comic.quantity }}
+                        </span>
+                    </td>
+                    <td class="text-center">
+                        <span class="">
+                            {{ comic.price }}
+                        </span>
+                    </td>
+                    <td>
+                        <a href="{{ path('admin_comics_edit', {'id': comic.id}) }}" class="btn btn-primary">
+                            <i class="fas fa-edit"></i>
+                        </a>
+                        <a href="{{ path('admin_comics_delete', {'id': comic.id}) }}" class="btn btn-danger delete-button">
+                            <i class="fas fa-trash"></i>
+                        </a>
+                    </td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+
+        <div class="d-flex justify-content-center my-5">
+            <ul class="pagination">
+                <li class="page-item {% if page == 1 %}disabled{% endif %}">
+                    <a class="page-link" href="{{path('admin_comics_index', {'page': page - 1})}}">&laquo;</a>
+                </li>
+
+                {% for i in 1..pages %}
+                    <li class="page-item {% if page == i %}active{% endif %}">
+                        <a class="page-link" href="{{ path('admin_comics_index', {'page': i}) }}">{{ i }}</a>
+                    </li>
+                {% endfor %}
+
+                <li class="page-item {% if page == pages %}disabled{% endif %}">
+                    <a class="page-link" href="{{ path('admin_comics_index', {'page': page + 1}) }}">&raquo;</a>
+                </li>
+            </ul>
+        </div>
+
+    </div>
+{% endblock %}

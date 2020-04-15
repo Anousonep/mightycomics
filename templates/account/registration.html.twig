@@ -1,0 +1,25 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}
+    Inscription
+{% endblock %}
+
+{% block body %}
+    <div class="container">
+        <h4 class="mt-4">Devenez un nouveau membre de Mighty Comics!</h4>
+        <div class="row">
+            <div class="col-md-3">&nbsp;</div>
+            <div class="col-md-6">
+                <div class="formRegister bg-dark py-3 px-3 mt-5">
+                    <h1>Inscrivez-vous!</h1>
+
+                    {{ form_start(form) }}
+                    {{ form_widget(form) }}
+                    <button type="submit" class="btn btn-primary">Confirmez!</button>
+                    {{ form_end(form) }}
+
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

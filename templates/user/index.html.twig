@@ -1,0 +1,23 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Page de {{ user.fullname }}{% endblock %}
+
+{% block body %}
+    <div class="container d-flex justify-content-center align-items-center">
+        <div class="row my-5">
+            <div class="col-5 d-flex justify-content-center align-items-start">
+                <img src="{{ user.picture }}" class="avatar bigAvatar" alt="Avatar de {{ user.fullname }}">
+            </div>
+            <div class="col-7 d-flex flex-column justify-content-center align-items-left text-left">
+                <h1>{{ user.fullname }}</h1>
+                {% if user is same as(app.user) %}
+                    <div class="buttonAccount d-flex flex-column mt-3">
+                        <a href="{{ path('account_profile') }}" class="btn btn-primary mr-2 mb-2">Modifier mes informations personnelles</a>
+                        <a href="{{ path('account_password') }}" class="btn btn-primary mr-2 mb-2">Modifier mon mot de passe</a>
+                        <a href="#" class="btn btn-primary mr-2 mb-2">Voir mes commandes</a>
+                    </div>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+{% endblock %}

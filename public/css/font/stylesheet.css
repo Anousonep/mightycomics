@@ -1,0 +1,12 @@
+@font-face {
+    font-family: 'Comic Ink';
+    src: url('ComicInk.eot');
+    src: url('ComicInk.eot?#iefix') format('embedded-opentype'),
+        url('ComicInk.woff2') format('woff2'),
+        url('ComicInk.woff') format('woff'),
+        url('ComicInk.ttf') format('truetype'),
+        url('ComicInk.svg#ComicInk') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+

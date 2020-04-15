@@ -1,0 +1,577 @@
+/*FONT*/
+@font-face {
+    font-family: 'Comic Ink';
+    src: url('font/ComicInk.eot');
+    src: url('font/ComicInk.eot?#iefix') format('embedded-opentype'),
+    url('font/ComicInk.woff2') format('woff2'),
+    url('font/ComicInk.woff') format('woff'),
+    url('font/ComicInk.ttf') format('truetype'),
+    url('font/ComicInk.svg#ComicInk') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+
+/*FIN FONT*/
+
+body{
+    font-family: 'Comic Ink', Arial, serif;
+}
+
+/*ADMIN*/
+a.viewSite{
+    text-align: right;
+}
+/*FIN ADMIN*/
+
+
+/*CONTENU BANNIERE LOGO*/
+body ul.containerLogo li.logoBan{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+body ul.containerLogo li.logoBan img#logoMC{
+    width: 200px;
+    height: 150px;
+
+}
+
+ul.containerLogo{
+    /*border: 1px solid red;*/
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+ul.containerLogo li{
+    list-style-type: none;
+}
+
+ul.containerLogo li.banLogoText{
+    text-align: right;
+}
+
+ul.containerLogo div.banLogin{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+ul.containerLogo div.banLogin .connected{
+    height: 50px;
+    text-align: right;
+}
+
+ul.containerLogo div.banLogin li.connexionButton{
+    height: 50px;
+    text-align: right;
+}
+
+ul.containerLogo div.banLogin li.subscribeButton{
+    height: 50px;
+    text-align: right;
+}
+
+ul.containerLogo div.banLogin li.subscribeButton > a{
+    text-decoration: underline;
+}
+
+div.kart > a{
+    text-align: right;
+}
+
+/*FIN CONTENU LOGO*/
+
+/*CAROUSEL NEWS*/
+.titleHome{
+    margin-left: 1%;
+}
+
+div.containNews div.containImgNews{
+    margin: 15px 0;
+}
+
+.carouselN{
+    /*border: 1px solid red;*/
+    width: 100%;
+    max-height: 100%;
+    text-align: center;
+    position: relative;
+}
+
+.indicatorNews {
+    /*left: 0;*/
+    /*top: auto;*/
+    /*bottom: -40px;*/
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    position: absolute;
+    bottom: unset;
+    margin-top: 50px;
+}
+
+/* The colour of the indicators */
+.indicatorNews li {
+    background: #a3a3a3;
+    list-style-type: none;
+    width: 40px;
+    height: 5px;
+    cursor: pointer;
+    margin: 0 10px;
+    border: none;
+}
+
+.indicatorNews .active {
+    background: white;
+}
+
+/*FIN CAROUSEL NEWS*/
+
+/*CAROUSEL LOVE*/
+
+div.containerLoveComics{
+    margin-top: 100px;
+}
+
+div.containLoveComics div.containImgLove{
+    margin: 15px 0;
+}
+
+.carouselL{
+    /*border: 1px solid red;*/
+    width: 100%;
+    max-height: 100%;
+    text-align: center;
+    position: relative;
+}
+
+.indicatorLove{
+    /*left: 0;*/
+    /*top: auto;*/
+    /*bottom: -40px;*/
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    position: absolute;
+    bottom: unset;
+    margin-top: 50px;
+}
+
+/* The colour of the indicators */
+.indicatorLove li {
+    background: #a3a3a3;
+    list-style-type: none;
+    width: 40px;
+    height: 5px;
+    cursor: pointer;
+    margin: 0 10px;
+    border: none;
+}
+
+.indicatorLove .active {
+    background: white;
+}
+
+/*FIN CAROUSEL LOVE*/
+
+
+
+/*FOOTER*/
+footer{
+    margin-top: 100px;
+}
+
+div.iconsFooter{
+    /*border: 1px solid red;*/
+    height: 250px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+div.containIconShip{
+    /*border: 1px solid red;*/
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+img.iconShip{
+    /*border: 1px solid green;*/
+    width: 100px;
+}
+
+div.socialFooter{
+    /*border: 1px solid red;*/
+    height: 130px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+a.containSocialFooter{
+    /*border: 1px solid deeppink;*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+img.iconSocial{
+    /*border: 1px solid deepskyblue;*/
+    width: 50px;
+}
+
+p.textSocial{
+    /*border: 1px solid yellow;*/
+    width: 100%;
+    margin: 0;
+}
+
+div.containIconShip > h5{
+    /*border: 1px solid royalblue;*/
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+div.containIconShip > p{
+    /*border: 1px solid yellow;*/
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: start;
+}
+
+/*FIN FOOTER*/
+
+/*PAGE COMICS*/
+
+div.containerFilter {
+    /*border: 1px solid red;*/
+    width: 100%;
+    height: 100%;
+}
+
+div.containerFilter form.containBarSearch{
+    display: flex;
+    justify-content: center;
+}
+
+div.containerFilter form input.barSearchLength{
+    width: 100%;
+    max-width: 500px;
+}
+
+div.containerAlphabet{
+    /*border: 1px solid red;*/
+    width: 100%;
+    height: 50px;
+}
+
+/*FIN PAGE COMICS*/
+
+
+/*PAGE SHOW COMIC*/
+
+p.textContent{
+    border: 1px solid #465461;
+    width: 100%;
+    height: 320px;
+    overflow: auto;
+}
+
+p.textEditor{
+    text-align: left;
+}
+
+.qty .count {
+    color: #000;
+    /*display: inline-block;*/
+    /*vertical-align: top;*/
+    font-size: 25px;
+    font-weight: 700;
+    line-height: 30px;
+    padding: 0 2px;
+    min-width: 55px;
+    height: 30px;
+    text-align: center;
+}
+.qty .plus {
+    cursor: pointer;
+    display: inline-block;
+    vertical-align: top;
+    color: white;
+    width: 30px;
+    height: 30px;
+    font-size: 30px;
+    line-height: 1;
+    text-align: center;
+    border-radius: 50%;
+}
+.qty .minus {
+    cursor: pointer;
+    display: inline-block;
+    vertical-align: top;
+    color: white;
+    width: 30px;
+    height: 30px;
+    font-size: 30px;
+    line-height: 1;
+    text-align: center;
+    border-radius: 50%;
+    background-clip: padding-box;
+}
+div {
+    text-align: center;
+}
+.minus:hover{
+    background-color: #717fe0 !important;
+}
+.plus:hover{
+    background-color: #717fe0 !important;
+}
+/*Prevent text selection*/
+/*span{*/
+/*    -webkit-user-select: none;*/
+/*    -moz-user-select: none;*/
+/*    -ms-user-select: none;*/
+/*}*/
+input{
+    border: 0;
+    width: 2%;
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+input:disabled{
+    background-color:white;
+}
+
+/*FIN PAGE SHOW*/
+
+p.titleComic{
+    /*border: 1px solid red;*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 3%;
+    height: 50px;
+    margin-bottom: 4%;
+    font-weight: bold;
+}
+
+p.priceComic{
+    margin-bottom: unset;
+}
+
+p.aboutComicText{
+    /*border: 1px solid red;*/
+    height: 60px;
+    overflow-y: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 1%;
+}
+
+/*LABEL FORM NEW*/
+div#comic{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+div#comic div.form-group label{
+    display: block;
+    text-align: left;
+}
+
+div#comic div.form-group{
+    width: 100%;
+    max-width: 700px;
+}
+
+span.input-group-text{
+    border: 1px solid white;
+}
+/*FIN LABEL FORM NEW*/
+
+/*LABEL FORM REGISTER*/
+div.formRegister form label{
+    display: block;
+    text-align: left;
+}
+
+/*FIN LABEL FORM REGISTER*/
+
+/*ACCOUNT PAGE*/
+div.buttonAccount > a{
+    width: 100%;
+    max-width: 400px;
+
+}
+/*FIN ACCOUNT PAGE*/
+
+/*AVATAR PROFILE*/
+.avatar{
+    max-width: 128px;
+    max-height: 128px;
+    border-radius: 20%;
+}
+
+.bigAvatar{
+    margin-top: 70px;
+    margin-right: 5%;
+}
+
+.avatar-mini{
+    max-width: 24px;
+    max-height: 24px;
+    margin-right: 2%;
+}
+/*FIN AVATAR*/
+
+
+@media screen and (max-width: 1200px){
+    p.titleComic{
+        text-align: center;
+        font-size: 0.8em;
+    }
+
+}
+
+
+@media screen and (max-width: 992px){
+    p.titleComic{
+        font-size: 0.8em;
+    }
+
+    p.aboutComicText{
+        height: 50px;
+        font-size: 0.7em;
+    }
+
+    a.textButtonCart{
+        font-size: 0.9em;
+    }
+
+    /*p.titleComic{*/
+    /*    height: 40px;*/
+    /*}*/
+
+    a.detailButton{
+        font-size: 0.9em;
+    }
+
+    body ul.containerLogo li.logoBan img#logoMC{
+        width: 175px;
+        height: 125px;
+
+    }
+}
+
+@media screen and (max-width: 767px){
+    div.containComicsMqueries{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    div.comicsMqueries{
+        width: 100%;
+        max-width: 174px;
+        margin: 0 0.5%;
+    }
+
+    a.textButtonCart{
+        font-size: 0.8em;
+    }
+
+    a.detailButton{
+        font-size: 0.8em;
+    }
+
+    body ul.containerLogo li.logoBan img#logoMC{
+        width: 150px;
+        height: 100px;
+    }
+
+    div.containerAllComics > h3{
+        text-align: center;
+    }
+
+    p.aboutComicText{
+        height: 40px;
+    }
+
+}
+
+
+/*@media screen and (max-width: 576px){*/
+
+
+/*}*/
+
+@media screen and (max-width: 480px){
+    body ul.containerLogo li.logoBan img#logoMC{
+        width: 125px;
+        height: 80px;
+    }
+
+    div.containerAllShow{
+        display: flex;
+        flex-direction: column;
+    }
+
+    /*div.containDescription{*/
+    /*    display: flex;*/
+    /*    flex-direction: column;*/
+    /*}*/
+
+    img.iconShip{
+        width: 80px;
+    }
+
+    a.containSocialFooter{
+        flex-direction: column;
+    }
+
+    img.iconSocial{
+        width: 30px;
+    }
+
+    p.textSocial{
+        font-size: 0.7em;
+    }
+
+    div.containIconShip > h5{
+        font-size: 0.7em;
+    }
+
+    div.containIconShip > p{
+        font-size: 0.7em;
+    }
+}
+
+
+
+/**/
+
+
+
+/**/

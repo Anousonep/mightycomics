@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+{#        <meta name="viewport" content="initial-scale=1, maximum-scale=1">#}
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>
+            MIGHTY COMICS
+            {% block title %}
+            {% endblock %}
+        </title>
+        {% block stylesheets %}
+            <link rel="stylesheet" href="{{ asset('css/bootstrap.min.css') }}">
+            <script src="https://kit.fontawesome.com/0ace564297.js" crossorigin="anonymous"></script>
+            <link rel="stylesheet" href="{{ asset('css/style.css') }}">
+        {% endblock %}
+    </head>
+    <body>
+        <ul class="containerLogo mb-3">
+            <li class="col-4 banLogoText"></li>
+            <li class="col-4 logoBan">
+                <img id="logoMC" src="{{ asset('img/logoMC400.png') }}">
+            </li>
+
+            <div class="col-4 banLogin">
+                {% if app.user %}
+                    <li class="nav-item dropdown connected">
+                        <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" id="accountDropdownLink">
+                            <img src="{{ app.user.picture }}" class="avatar avatar-mini" alt="Avatar de {{ app.user.fullname }}"> {{ app.user.fullname }}
+                        </a>
+
+                        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="accountDropdownLink">
+                            <a href="{{ path('account_index') }}" class="dropdown-item">
+                                <i class="fas fa-user"></i>
+                                Mon compte
+                            </a>
+                            <a href="{{ path('account_profile') }}" class="dropdown-item">
+                                <i class="fas fa-user-edit"></i>
+                                Modifier mon profil
+                            </a>
+                            <div class="dropdown-divider"></div>
+                            <a href="{{ path('account_logout') }}" class="dropdown-item">
+                                <i class="fas fa-sign-out-alt"></i>
+                                Déconnexion
+                            </a>
+                        </div>
+                    </li>
+
+                {% else %}
+                    <li class="connexionButton">
+                        <a href="{{ path('account_login') }}" class="nav-link">
+                            <i class="fas fa-sign-in-alt"></i>
+                            Connexion
+                        </a>
+                    </li>
+
+                    <li class="subscribeButton">
+{#                        <p>Vous n'avez pas encore de compte?</p>#}
+                        <a href="{{ path('account_register') }}" class="nav-link">
+                            <i class="fas fa-user-plus"></i>
+                            S'inscrire
+                        </a>
+                    </li>
+                {% endif %}
+                <div class="kart">
+                    <a href="#" class="nav-item nav-link">
+                        <i class="fas fa-cart-arrow-down"></i>
+                        Voir mon panier
+                    </a>
+                </div>
+            </div>
+
+
+{#            <li class="col banLogoText">#}
+{#                <a href="#">Mon compte</a>#}
+{#            </li>#}
+        </ul>
+
+        {% include 'part/header.html.twig' %}
+
+
+        {% block body %}
+        {% endblock %}
+
+
+        {% include 'part/footer.html.twig' %}
+
+        {% block javascripts %}
+            <script src="{{ asset('js/jquery-3.4.1.min.js') }}"></script>
+            <script src="{{ asset('js/popper.min.js') }}"></script>
+            <script src="{{ asset('js/bootstrap.min.js') }}"></script>
+            <script src="{{ asset('js/script.js') }}"></script>
+        {% endblock %}
+    </body>
+</html>

@@ -1,0 +1,48 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}
+    {{ comic.title }}
+{% endblock %}
+
+{% block body %}
+    <div class="container d-flex justify-content-center align-items-center mt-4">
+        <div class="jumbotron containerAllShow col-lg-12 d-flex justify-content-start align-items-start">
+            <img class="col-sm-6 col-md-6 col-lg-6" src="{{comic.coverImage}}">
+
+            <div class="container containDescription col-sm-6 col-md-6 col-lg-6">
+                <h1 class="text-left">
+                    {{ comic.title }}
+                </h1>
+
+                <p class="lead text-left textContent">
+                    {{ comic.content }}
+                </p>
+
+                <p class="textEditor">
+                    Scénario: {{ comic.scenario }}
+                </p>
+                <p class="textEditor">
+                    Dessin: {{ comic.draw }}
+                </p>
+                <p class="textEditor">
+                    Editeur: {{ comic.editor }}
+                </p>
+
+                <hr class="my-4">
+                <p>
+                    {{ comic.price }}€
+                </p>
+                <p class="lead">
+                    <div class="qty mt-5">
+                        <span class="minus bg-dark">-</span>
+                        <input type="number" class="count" name="qty" value="1">
+    {#                    <i class="far fa-plus-square"></i>#}
+                        <span class="plus bg-dark">+</span>
+                    </div>
+
+                    <a class=" btn btn-primary bg-warning my-3 textButtonCart" href="#" role="button">Ajouter au panier</a>
+                </p>
+            </div>
+        </div>
+    </div>
+{% endblock %}

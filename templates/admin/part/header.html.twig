@@ -1,0 +1,48 @@
+
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark mb-5">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor02" aria-controls="navbarColor02" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse py-3" id="navbarColor02">
+        <ul class="navbar-nav mx-auto">
+            <li class="nav-item active">
+                <a class="nav-link" href="#">
+                    <i class="fas fa-chart-line"></i>
+                    Dashboard
+                </a>
+            </li>
+            <li class="nav-item active">
+                <a class="nav-link" href="#">
+                    <i class="fas fa-images"></i>
+                    Bannières
+                </a>
+            </li>
+            <li class="nav-item active">
+                <a class="nav-link" href="{{ path('admin_comics_index') }}">
+                    <i class="fas fa-book-open"></i>
+                    Comics
+                </a>
+            </li>
+            <li class="nav-item active">
+                <a class="nav-link" href="{{ path('admin_users_index')}}">
+                    <i class="fas fa-user"></i>
+                    Utilisateurs
+                </a>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+{% for label, messages in app.flashes %}
+    <div class="container">
+        <div class="alert alert-{{ label }}">
+            {% for message in messages %}
+                <p>{{ message |raw }}</p>
+            {% endfor %}
+        </div>
+    </div>
+{% endfor %}
+
+{#        {{ dump(app.flashes) }}#}
